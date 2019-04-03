@@ -1,27 +1,65 @@
 # Brainstorming
 \[명사\] 창조적 집단 사고
 
-## Remora
+## Tech Stack
 ### Agent
+- Java
 
 
 ### Master
+- Node.js
+- Java
 
 
 ### UI
+#### JavaScript Framework
+- Vue.js
+- React
 
 
 ### DevOps
-> Gradle
+#### Build Tools
+- Gradle
+
+#### CI/CD
+- Jenkins
+
+#### Static Analysis Tools
+- SonarQube
+
+
+## Remora's Features
+### Agent
+#### Monitoring Target
+- Spring
+    - Method Annotation?
+- Java EE Servlet
+
+
+### Mater
+
+
+### UI
+#### 3rd-party UI
+- [PAPER (Scouter 3rd-party UI) 설치](https://gunsdevlog.blogspot.com/2018/04/scouter-web-ui-paper.html)
+
 
 ## Culture
 ### Code Review
-- <https://cimfalab.github.io/deepscan/2016/08/code-review-1>
+- [코드 리뷰 문화](https://cimfalab.github.io/deepscan/2016/08/code-review-1)
 
 
 ### Commit Guidelines
-- <https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits>
+> 우리 모두 지킵시다!
+
+- [Angular Commit Guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits)
 
 
 ### Coding Convention
-- <https://github.com/airbnb/javascript>
+> 각 언어 별로 정해서 지킵시다!
+
+- Java
+    - [Google](https://google.github.io/styleguide/javaguide.html)
+    - [Oracle](https://www.oracle.com/technetwork/java/codeconvtoc-136057.html)
+- JavaScript
+    - [Airbnb](https://github.com/airbnb/javascript)
