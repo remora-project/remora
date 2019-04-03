@@ -11,8 +11,8 @@
 ### UI
 
 
-### DevOps
-
+### DevOp
+Gradle
 
 ## Culture
 ### Code Review
