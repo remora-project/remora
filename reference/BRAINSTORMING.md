@@ -4,17 +4,23 @@
 ## Tech Stack
 ### Agent
 - Java
+- Docker
 
 
 ### Master
 - Node.js
 - Java
+- Docker
 
 
 ### UI
 #### JavaScript Framework
 - Vue.js
 - React
+
+#### CSS Framework
+- [Semantic UI](https://semantic-ui.com/)
+- [Bootstrap](https://getbootstrap.com/)
 
 
 ### DevOps
