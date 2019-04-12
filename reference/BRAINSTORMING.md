@@ -42,7 +42,7 @@
 - Java EE Servlet
 
 
-### Mater
+### Master
 
 
 ### UI
@@ -68,4 +68,5 @@
     - [Google](https://google.github.io/styleguide/javaguide.html)
     - [Oracle](https://www.oracle.com/technetwork/java/codeconvtoc-136057.html)
 - JavaScript
+	- [Convention은 선택이 아닌 의무다(pre-commit with ESlint)](https://medium.com/@rashtay/how-to-run-eslint-using-pre-commit-hook-25984fbce17e)
     - [Airbnb](https://github.com/airbnb/javascript)
