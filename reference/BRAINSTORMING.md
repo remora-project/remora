@@ -14,6 +14,8 @@
 
 
 ### UI
+> Ref: <https://2018.stateofjs.com/>
+
 #### JavaScript Framework
 - Vue.js
 - React
@@ -21,6 +23,13 @@
 #### CSS Framework
 - [Semantic UI](https://semantic-ui.com/)
 - [Bootstrap](https://getbootstrap.com/)
+
+#### Data Layer
+- [GraphQL](https://graphql.org/)
+- [Apollo](https://www.apollographql.com/)
+
+#### Testing Framework
+- [Jest](https://jestjs.io/)
 
 
 ### DevOps
@@ -68,5 +77,5 @@
     - [Google](https://google.github.io/styleguide/javaguide.html)
     - [Oracle](https://www.oracle.com/technetwork/java/codeconvtoc-136057.html)
 - JavaScript
-	- [Convention은 선택이 아닌 의무다(pre-commit with ESlint)](https://medium.com/@rashtay/how-to-run-eslint-using-pre-commit-hook-25984fbce17e)
+	- [Convention은 선택이 아닌 의무다 (pre-commit with ESlint)](https://medium.com/@rashtay/how-to-run-eslint-using-pre-commit-hook-25984fbce17e)
     - [Airbnb](https://github.com/airbnb/javascript)
