@@ -1,4 +1,4 @@
-import User from '../../model/user.js';
+import User from '../../mongo/models/user';
 
 export default {
   Query: {
