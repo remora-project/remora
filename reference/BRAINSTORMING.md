@@ -27,6 +27,8 @@
 #### Data Layer
 - [GraphQL](https://graphql.org/)
 - [Apollo](https://www.apollographql.com/)
+    - [Apollo Client](https://github.com/apollographql/apollo-client)
+    - [Docs of Apollo Client for Vue.js](https://vue-apollo.netlify.com/)
 
 #### Testing Framework
 - [Jest](https://jestjs.io/)
