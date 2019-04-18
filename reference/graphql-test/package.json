@@ -30,7 +30,8 @@
     "nodemon": "^1.18.11",
     "serve-favicon": "^2.5.0",
     "vue": "^2.6.10",
-    "vue-apollo": "^3.0.0-beta.28"
+    "vue-apollo": "^3.0.0-beta.28",
+    "vuetify": "^1.5.12"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
@@ -41,6 +42,7 @@
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
     "file-loader": "^3.0.1",
+    "material-design-icons-iconfont": "^4.0.5",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
