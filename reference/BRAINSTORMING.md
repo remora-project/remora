@@ -21,8 +21,12 @@
 - React
 
 #### CSS Framework
+> Ref: [11 Vue.js UI Component Libraries you Should Know in 2019](https://blog.bitsrc.io/11-vue-js-component-libraries-you-should-know-in-2018-3d35ad0ae37f)
+
 - [Semantic UI](https://semantic-ui.com/)
 - [Bootstrap](https://getbootstrap.com/)
+- CSS Framework for Vue.js
+    - [Vuetify](https://vuetifyjs.com/en/)
 
 #### Data Layer
 - [GraphQL](https://graphql.org/)
