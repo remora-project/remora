@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
-  entry: './src/main.js',
+  entry: ['@babel/polyfill', './src/main.js'],
   plugins: [
     new CleanWebpackPlugin(),
     new VueLoaderPlugin(),

@@ -31,58 +31,38 @@
 
 <script>
 import gql from 'graphql-tag';
+import { mapState } from 'vuex';
 
 export default {
   name: 'UserList',
-  mounted() {
-    this.$root.$on('userAdded', ()=>{
-      this.$apollo.queries.users.refetch();
-    });
+  computed: {
+    ...mapState(['users']),
   },
-  apollo: {
-    users: gql`query {
-      users {
-        id
-        name
-        email
-      }
-    }`,
+  beforeCreate() {
+    this.$store.dispatch('fetchUsers');
   },
-  data: ()=>({
-    users: [],
-  }),
   methods: {
-    deleteUser({ id }, index) {
-      this.$apollo.mutate({
-        mutation: gql`mutation($id: String!) {
-          deleteUser(id: $id) {
+    async deleteUser({ id }, index) {
+      try {
+        const { data } = await this.$apollo.mutate({
+          mutation: gql`mutation($id: String!) {
+            deleteUser(id: $id) {
+              id,
+              name,
+              email
+            }
+          }`,
+          variables: {
             id,
-            name,
-            email
-          }
-        }`,
-        variables: {
-          id,
-        },
-      }).then(data=>{
+          },
+        });
         console.log('deleteUser():', data);
+
         this.users.splice(index, 1);
-      }).catch(err=>{
+      } catch(e) {
         console.error('deleteUser():', err);
-      });
+      }
     },
   }
 }
 </script>
-
-<style lang="scss" scoped>
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-li {
-  color: #36495D;
-  font-size: 20px;
-}
-</style>

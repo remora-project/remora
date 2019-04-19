@@ -13,7 +13,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-boost": "^0.3.1",
+    "@babel/runtime": "^7.4.3",
+    "apollo-cache-inmemory": "^1.5.1",
+    "apollo-client": "^2.5.1",
+    "apollo-link-http": "^1.5.14",
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "cors": "^2.8.5",
@@ -22,6 +25,7 @@
     "express-graphql": "^0.7.1",
     "express-session": "^1.16.1",
     "graphql": "^14.2.1",
+    "graphql-tag": "^2.10.1",
     "graphql-tools": "^4.0.4",
     "merge-graphql-schemas": "^1.5.8",
     "method-override": "^3.0.0",
@@ -31,12 +35,15 @@
     "serve-favicon": "^2.5.0",
     "vue": "^2.6.10",
     "vue-apollo": "^3.0.0-beta.28",
-    "vuetify": "^1.5.12"
+    "vuetify": "^1.5.12",
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.1",

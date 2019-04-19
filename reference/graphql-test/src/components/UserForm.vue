@@ -55,30 +55,32 @@ export default {
     ],
   }),
   methods: {
-    addUser() {
+    async addUser() {
       if(!this.$refs.form.validate()) { return; }
 
-      const { id, name, email } = this;
-      this.$apollo.mutate({
-        mutation: gql`mutation($id: String!, $name: String!, $email: String!) {
-          addUser(id: $id, name: $name, email: $email) {
+      try {
+        const { id, name, email } = this;
+        const { data } = await this.$apollo.mutate({
+          mutation: gql`mutation($id: String!, $name: String!, $email: String!) {
+            addUser(id: $id, name: $name, email: $email) {
+              id,
+              name,
+              email
+            }
+          }`,
+          variables: {
             id,
             name,
-            email
-          }
-        }`,
-        variables: {
-          id,
-          name,
-          email,
-        },
-      }).then(data=>{
+            email,
+          },
+        });
         console.log('addUser():', data);
+
         this.$refs.form.reset();
-        this.$root.$emit('userAdded');
-      }).catch(err=>{
-        console.error('addUser():', err);
-      });
+        this.$store.dispatch('fetchUsers');
+      } catch(e) {
+        console.error('addUser():', e);
+      }
     },
   },
 }

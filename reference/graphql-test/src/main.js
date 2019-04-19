@@ -1,22 +1,19 @@
 import Vue from 'vue';
-import VueApollo from 'vue-apollo';
 import Vuetify from 'vuetify';
 
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import 'vuetify/dist/vuetify.min.css';
 
-import apolloClient from './apolloClient';
 import App from './App.vue';
+import store from './store';
+import apolloProvider from './apollo';
 
-const apolloProvider = new VueApollo({
-  defaultClient: apolloClient,
-});
-
-Vue.use(VueApollo);
+Vue.config.productionTip = false;
 Vue.use(Vuetify);
 
 new Vue({
   el: '#app',
+  store,
   apolloProvider,
   render: h => h(App)
 });
