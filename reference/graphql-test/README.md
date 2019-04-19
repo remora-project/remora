@@ -17,7 +17,7 @@
 - MongoDB 띄우기
     - MongoDB가 설치된 path를 환경변수로 설정하는 것을 추천
     - 맨 아래 처럼 `waiting for~` 이렇게 로그가 나오면 정상적으로 띄워진 것
-    - **주의**: Compass를 설치했다면 이미 DB가 띄워져있어서 에러가 발생할 수 있음
+    - **Caution!**: Compass를 설치했다면 이미 DB가 띄워져있어서 에러가 발생할 수 있음
 ```sh
 cd $MONGO_PATH/bin
 ./mongod --dbpath "../data"
@@ -36,10 +36,16 @@ cd $MONGO_PATH/bin
 ### Getting Started
 - module 설치
     - `package.json`이 있는 경로에서 아래 명령어 입력
-    - **주의**: git pull 이후에 `package.json`이 수정되었다면 다시 명령어를 입력해야 함
+    - **Caution!**: git pull 이후에 `package.json`이 수정되었다면 다시 명령어를 입력해야 함
 ```sh
 npm install
 ```
+> **Caution!**: 아래 처럼 security 에러가 발생할 수 있으나, 동작에는 문제가 없으므로 무시해도 좋음
+> ```sh
+> found 1 high severity vulnerability`
+>   run `npm audit fix` to fix them, or `npm audit` for details
+> ```
+
 - Node.js 서버 띄우기
     - MongoDB가 띄워진 후에 실행해야 에러가 발생하지 않음
     - 아래 처럼 나와야 정상적으로 서버가 뜬 것
