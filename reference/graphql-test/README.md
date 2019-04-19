@@ -69,3 +69,33 @@ npm start
 # or
 npm run build
 ```
+
+
+## A History of Reinventing the Wheel
+### Form으로 입력받은 데이터가 추가된 후, 리스트 업데이트
+- Communication Between Vue.js Components
+    - <https://flaviocopes.com/vue-components-communication/>
+```js
+// event를 발생시키는 부분
+this.$root.$emit('userAdded');
+
+// event에 대한 callback 설정하는 부분
+mounted() {
+  this.$root.$on('userAdded', ()=>{
+    this.$apollo.queries.users.refetch();
+  });
+},
+```
+- GraphQL + Apollo + Vuex
+    - ref: <https://markus.oberlehner.net/blog/combining-graphql-and-vuex/>
+    - Vuex (State Manager)
+        - *Case가 많아지면 복잡해질텐데, Event Bus를 대체할 방법이 없는가?*
+        - <https://flaviocopes.com/vuex/>
+    - Use Async/Await in Babel 7
+        - *async/await를 사용하면 에러가 발생*
+        - [Migration to Babel 7](https://babeljs.io/docs/en/env)
+        - [Apply Babel plugins to use ES7](https://babeljs.io/docs/en/next/babel-plugin-transform-runtime)
+        - [Async/Await와 Promise의 비교](https://medium.com/@constell99/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%EC%9D%98-async-await-%EA%B0%80-promises%EB%A5%BC-%EC%82%AC%EB%9D%BC%EC%A7%80%EA%B2%8C-%EB%A7%8C%EB%93%A4-%EC%88%98-%EC%9E%88%EB%8A%94-6%EA%B0%80%EC%A7%80-%EC%9D%B4%EC%9C%A0-c5fe0add656c)
+    - Apollo Client Config
+        - *state를 update해도 리스트가 변경되지 않음*
+        - <https://www.apollographql.com/docs/react/api/apollo-client>
