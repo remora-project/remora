@@ -6,6 +6,20 @@
 - Java
 - Docker
 
+#### Bytecode Libraries
+- [ASM](https://asm.ow2.io/)
+
+#### Logging Libraries
+- [slf4j](https://www.slf4j.org/)
+- [log4j vs slf4j](https://inyl.github.io/programming/2017/05/05/slf4j.html)
+
+#### Data Layer
+- [GraphQL-Java](https://www.graphql-java.com/documentation/v12/)
+
+#### Testing Framework
+- [Mockito](https://github.com/mockito/mockito/wiki/Mockito-features-in-Korean)
+- [JUnit](https://junit.org/junit5/)
+
 
 ### Master
 - Node.js
@@ -30,7 +44,6 @@
 
 #### Data Layer
 - [GraphQL](https://graphql.org/)
-- [GraphQL-Java](https://www.graphql-java.com/documentation/v12/)
 - [Apollo](https://www.apollographql.com/)
     - [Apollo Client](https://github.com/apollographql/apollo-client)
     - [Docs of Apollo Client for Vue.js](https://vue-apollo.netlify.com/)
@@ -55,10 +68,10 @@
 #### Monitoring Target
 - WAS
 	- Tomcat
-- Framework
-	- Spring
 - Java EE
 	- Servlet
+- Framework
+	- Spring
 
 
 ### Master
