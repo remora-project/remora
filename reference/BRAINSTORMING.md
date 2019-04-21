@@ -30,6 +30,7 @@
 
 #### Data Layer
 - [GraphQL](https://graphql.org/)
+- [GraphQL-Java](https://www.graphql-java.com/documentation/v12/)
 - [Apollo](https://www.apollographql.com/)
     - [Apollo Client](https://github.com/apollographql/apollo-client)
     - [Docs of Apollo Client for Vue.js](https://vue-apollo.netlify.com/)
@@ -52,9 +53,12 @@
 ## Remora's Features
 ### Agent
 #### Monitoring Target
-- Spring
-    - Method Annotation?
-- Java EE Servlet
+- WAS
+	- Tomcat
+- Framework
+	- Spring
+- Java EE
+	- Servlet
 
 
 ### Master
