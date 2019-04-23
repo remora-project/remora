@@ -15,22 +15,14 @@ cmake-build-*/
 # IntelliJ
 out/
 
-# mpeltonen/sbt-idea plugin
-
 # JIRA plugin
 atlassian-ide-plugin.xml
-
-# Cursive Clojure plugin
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
-
-# Editor-based Rest Client
-
-# Android studio 3.1+ serialized cache file
 
 # JetBrains templates
 **___jb_tmp___
@@ -42,8 +34,6 @@ fabric.properties
 # modules.xml
 # .idea/misc.xml
 # *.ipr
-
-# Sonarlint plugin
 
 ### Java ###
 # Compiled class file
