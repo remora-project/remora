@@ -5,8 +5,8 @@
       <g ref="yAxis"></g>
 
       <rect
-        v-for="(sq, idx) in squares" :key="idx"
-        :class="`square${idx}`"
+        v-for="(sq, i) in squares" :key="i"
+        :class="`square${i}`"
         :x="x(sq.group)"
         :y="y(sq.variable)"
         :rx="r"
@@ -16,7 +16,7 @@
         :fill="colors(sq.value)"
         opacity="0.8"
         stroke-width="3"
-        @mouseover="mouseover($event)"
+        @mouseover="mouseover($event, sq, i)"
         @mouseleave="mouseleave($event)"
       ></rect>
     </g>
@@ -90,15 +90,19 @@ export default {
       }
     },
 
-    mouseover(e) {
+    mouseover(e, sq, i) {
       d3.select(e.target)
         .style('stroke', '#C50707')
         .style('opacity', 1);
+
+      this.$emit('hover', { text: sq.value, id: `.square${i}` });
     },
     mouseleave(e) {
       d3.select(e.target)
         .style('stroke', 'none')
         .style('opacity', 0.8);
+
+      this.$emit('out');
     },
   },
 }
