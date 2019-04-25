@@ -1,4 +1,4 @@
-# TX Chart Test
+# HeatMap Test
 
 ## Design
 - Scatter 대신에 Heat Map으로 그리기
