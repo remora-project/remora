@@ -5,7 +5,7 @@
       <g ref="yAxis"></g>
 
       <rect
-        v-for="(sq, i) in squares" :key="i"
+        v-for="(sq, i) in dataSet" :key="i"
         :class="`square${i}`"
         :x="x(sq.group)"
         :y="y(sq.variable)"
@@ -39,6 +39,11 @@ import * as d3 from 'd3';
 
 export default {
   name: 'HeatMap',
+  props: {
+    dataSet: {
+      type: [Object, Array],
+    },
+  },
   data: ()=>({
     chartSize: 500,
     margin: 30,
@@ -54,9 +59,14 @@ export default {
   }),
   mounted() {
     this.setScales();
-
     this.drawAxes();
-    this.setSquares();
+  },
+  watch: {
+    dataSet(data) {
+      this.colors = d3.scaleQuantile()
+        .domain([0, this.colorSet.length - 1, d3.max(data, d=>d.value)])
+        .range(this.colorSet);
+    },
   },
   methods: {
     setScales() {
@@ -77,17 +87,6 @@ export default {
     drawAxes() {
       d3.select(this.$refs.xAxis).call(d3.axisBottom(this.x));
       d3.select(this.$refs.yAxis).call(d3.axisLeft(this.y));
-    },
-    async setSquares() {
-      try {
-        this.squares = await d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv');
-
-        this.colors = d3.scaleQuantile()
-          .domain([0, this.colorSet.length - 1, d3.max(this.squares, d=>d.value)])
-          .range(this.colorSet);
-      } catch(e) {
-        console.error(e);
-      }
     },
 
     mouseover(e, sq, i) {

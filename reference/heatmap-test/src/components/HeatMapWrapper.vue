@@ -1,6 +1,6 @@
 <template>
   <v-flex>
-    <heat-map @hover="showTooltip" @out="tooltip.isActive = false" />
+    <heat-map :dataSet="dataSet" @hover="showTooltip" @out="tooltip.isActive = false" />
 
     <v-tooltip right :activator="tooltip.id" v-model="tooltip.isActive">
       <span>Value: {{ tooltip.text }}</span>
@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import * as d3 from 'd3';
+
 import HeatMap from './HeatMap.vue';
 
 export default {
@@ -16,13 +18,24 @@ export default {
     HeatMap,
   },
   data: ()=>({
+    dataSet: null,
     tooltip: {
       isActive: false,
       id: '',
       text: '',
     },
   }),
+  created() {
+    this.loadData();
+  },
   methods: {
+    async loadData() {
+      try {
+        this.dataSet = await d3.csv('https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/heatmap_data.csv');
+      } catch(e) {
+        console.error(e);
+      }
+    },
     showTooltip({ id, text }) {
       this.tooltip = {
         isActive: true,
