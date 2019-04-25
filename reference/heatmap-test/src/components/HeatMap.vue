@@ -1,12 +1,12 @@
 <template>
-  <svg :width="chartSize + margin" :height="chartSize + margin*2">
+  <svg :width="chartSize + margin*1.2" :height="chartSize + margin*2">
     <g :transform="`translate(${margin}, 0)`">
       <g ref="xAxis" :transform="`translate(0, ${chartSize})`"></g>
       <g ref="yAxis"></g>
 
       <rect
-        v-for="(sq, idx) in squares"
-        :key="idx"
+        v-for="(sq, idx) in squares" :key="idx"
+        :class="`square${idx}`"
         :x="x(sq.group)"
         :y="y(sq.variable)"
         :rx="r"
@@ -14,6 +14,10 @@
         :width="x.bandwidth()"
         :height="y.bandwidth()"
         :fill="colors(sq.value)"
+        opacity="0.8"
+        stroke-width="3"
+        @mouseover="mouseover($event)"
+        @mouseleave="mouseleave($event)"
       ></rect>
     </g>
 
@@ -43,7 +47,7 @@ export default {
 
     x: null,
     y: null,
-    r: 4,
+    r: 2,
     colors: null,
 
     squares: [],
@@ -84,7 +88,24 @@ export default {
       } catch(e) {
         console.error(e);
       }
-    }
+    },
+
+    mouseover(e) {
+      d3.select(e.target)
+        .style('stroke', '#C50707')
+        .style('opacity', 1);
+    },
+    mouseleave(e) {
+      d3.select(e.target)
+        .style('stroke', 'none')
+        .style('opacity', 0.8);
+    },
   },
 }
 </script>
+
+<style lang="scss" scoped>
+rect[class^="square"] {
+  cursor: pointer;
+}
+</style>
