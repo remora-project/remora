@@ -13,6 +13,11 @@
 ### D3.js
 - [D3.js 공부 참고사이트](http://codefactory.kr/d3-js-tutorials/)
 - [D3.js를 이용한 실시간 Line Chart](https://jeong-pro.tistory.com/149)
+- [D3.js Gallery](https://github.com/d3/d3/wiki/Gallery)
+
+### Examples of HeatMap
+- [Most basic heatmap in d3.js](https://www.d3-graph-gallery.com/graph/heatmap_basic.html)
+- [Customizing heatmap in d3.js](https://www.d3-graph-gallery.com/graph/heatmap_style.html)
 
 
 ## Chart Libraries
