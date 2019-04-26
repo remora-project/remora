@@ -14,8 +14,7 @@
         :width="x.bandwidth()"
         :height="y.bandwidth()"
         :fill="colors(sq.value)"
-        opacity="0.8"
-        stroke-width="3"
+        :opacity="opacity"
         @mouseover="mouseover($event, sq, i)"
         @mouseleave="mouseleave($event)"
       ></rect>
@@ -54,8 +53,7 @@ export default {
     y: null,
     r: 2,
     colors: null,
-
-    squares: [],
+    opacity: 0.7,
   }),
   mounted() {
     this.setScales();
@@ -91,15 +89,13 @@ export default {
 
     mouseover(e, sq, i) {
       d3.select(e.target)
-        .style('stroke', '#C50707')
         .style('opacity', 1);
 
       this.$emit('hover', { text: sq.value, id: `.square${i}` });
     },
     mouseleave(e) {
       d3.select(e.target)
-        .style('stroke', 'none')
-        .style('opacity', 0.8);
+        .style('opacity', this.opacity);
 
       this.$emit('out');
     },
