@@ -40,8 +40,9 @@ export async function importDummy() {
     if(!await isEmpty()) { return; }
 
     const N = 100;
-    const { result } = await Tx.collection.insert(genDummyData(N));
-    console.log('Dummy data are imported:', result);
+    const imported = await Tx.insertMany(genDummyData(N));
+
+    console.log('Importing dummy data is done:', imported.length);
   } catch(e) {
     console.error(e);
   }
