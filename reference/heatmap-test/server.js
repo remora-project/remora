@@ -7,6 +7,7 @@ import logger from 'morgan';
 import errorHandler from 'errorhandler';
 import favicon from 'serve-favicon';
 
+import connMongo from './server/mongo';
 import router from './server/router';
 
 const app = express();
@@ -30,6 +31,7 @@ if(app.get('env') === 'development') {
   app.use(errorHandler());
 }
 
+connMongo();
 router(app, __dirname);
 
 http.createServer(app).listen(app.get('port'), () => {
