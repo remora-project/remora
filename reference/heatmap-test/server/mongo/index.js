@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { importDummy } from '../controllers/txnController';
+import { importDummy } from '../controllers/transactionController';
 
 const DB_NAME = 'remora';
 const DB_URI = `mongodb://127.0.0.1/${DB_NAME}`;

@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
-const TxnSchema = new Schema({
+const TransactionSchema = new Schema({
   timestamp: {
     type: Number,
     required: true,
@@ -13,4 +13,4 @@ const TxnSchema = new Schema({
   },
 });
 
-export default mongoose.model('Txn', TxnSchema);
+export default mongoose.model('Transaction', TransactionSchema);

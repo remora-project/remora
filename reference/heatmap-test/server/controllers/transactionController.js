@@ -1,4 +1,4 @@
-import Tx from '../mongo/models/txn';
+import Tx from '../mongo/models/transaction';
 
 export async function getList(req, res) {
   try {
