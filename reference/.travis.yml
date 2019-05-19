@@ -1,0 +1,8 @@
+before_install:
+  - chmod +x gradlew
+install: gradle wrapper --gradle-version 5.4.1
+language: java
+email:
+  recipients:
+    - dbwls08640@gmail.com
+  on_success: [always|never|change] #default:always
