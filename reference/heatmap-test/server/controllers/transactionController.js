@@ -61,7 +61,7 @@ async function getHeatmapCounts() {
     const tsEtBucket = Object.keys(tsBucket).reduce((bucket, key)=>{
       bucket[key] = tsBucket[key].reduce((obj, et)=>{
         let b = getBoundary(etBoundaries, et);
-        obj[b] = obj[b] || [];
+        obj[b] = obj[b] || 0;
         obj[b] += 1;
         return obj;
       }, {});
