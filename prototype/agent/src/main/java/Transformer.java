@@ -12,17 +12,17 @@ import org.objectweb.asm.Opcodes;
 import main.java.bci.DefaultClassAdapter;
 
 public class Transformer implements ClassFileTransformer {
-	public byte[] transform(ClassLoader classLoader, String className, Class<?> arg2, ProtectionDomain domain,
-			byte[] byteCodebuffer) throws IllegalClassFormatException {
+  public byte[] transform(ClassLoader classLoader, String className, Class<?> arg2, ProtectionDomain domain,
+      byte[] byteCodebuffer) throws IllegalClassFormatException {
 
-		byte[] originByteCode = byteCodebuffer;
+    byte[] originByteCode = byteCodebuffer;
 
-		ClassReader cr = new ClassReader(byteCodebuffer);
-		ClassWriter cw = new ClassWriter(cr, ClassWriter.COMPUTE_FRAMES);
-		ClassVisitor cv = new DefaultClassAdapter(Opcodes.ASM5);
+    ClassReader cr = new ClassReader(byteCodebuffer);
+    ClassWriter cw = new ClassWriter(cr, ClassWriter.COMPUTE_FRAMES);
+    ClassVisitor cv = new DefaultClassAdapter(Opcodes.ASM5);
 
-		byte[] transformByteCode = cw.toByteArray();
-		
-		return transformByteCode;
-	}
+    byte[] transformByteCode = cw.toByteArray();
+
+    return transformByteCode;
+  }
 }
