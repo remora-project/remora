@@ -6,22 +6,6 @@
     - [와탭의 히트맵](https://www.whatap.io/apm-java/) 처럼 만들어 보자!
 
 
-## Vue.js + D3.js
-- [Composing D3 Visualizations With Vue.js](https://medium.com/tyrone-tudehope/composing-d3-visualizations-with-vue-js-c65084ccb686)
-- [Vue + d3: 줌과 패닝이 가능한 Tree 그래프 그리기](https://dev.zzoman.com/2017/10/27/vue-d3-tree-with-zoom-and-panning/)
-- [D3-Vue](https://github.com/LuisManuelNR/D3-Vue)
-
-### D3.js
-- [D3 API Reference](https://github.com/d3/d3/blob/master/API.md#dragging-d3-drag)
-- [D3.js Gallery](https://github.com/d3/d3/wiki/Gallery)
-- [D3.js 공부 참고사이트](http://codefactory.kr/d3-js-tutorials/)
-- [D3.js를 이용한 실시간 Line Chart](https://jeong-pro.tistory.com/149)
-
-### Examples of HeatMap
-- [Most basic heatmap in d3.js](https://www.d3-graph-gallery.com/graph/heatmap_basic.html)
-- [Customizing heatmap in d3.js](https://www.d3-graph-gallery.com/graph/heatmap_style.html)
-
-
 ## Chart Libraries
 > [The Best JavaScript Data Visualization & Charting Libraries 2018](https://www.codewall.co.uk/the-best-javascript-data-visualization-charting-libraries/)  
 > [Top Vue.js Chart Components](https://madewithvuejs.com/blog/top-vue-js-chart-components)  
@@ -46,3 +30,26 @@
     - 예제 ([AmChart Showcase](https://codepen.io/collection/AevpRB/))가 많지만 license 구매 필요
     - 참고용으로 보면 좋을 듯
     - [Example of Heat Map](https://codepen.io/team/amcharts/pen/pLOXgO)
+
+
+## Vue.js + D3.js
+- [Composing D3 Visualizations With Vue.js](https://medium.com/tyrone-tudehope/composing-d3-visualizations-with-vue-js-c65084ccb686)
+- [Vue + d3: 줌과 패닝이 가능한 Tree 그래프 그리기](https://dev.zzoman.com/2017/10/27/vue-d3-tree-with-zoom-and-panning/)
+- [D3-Vue](https://github.com/LuisManuelNR/D3-Vue)
+
+### D3.js
+- [D3 API Reference](https://github.com/d3/d3/blob/master/API.md#dragging-d3-drag)
+- [D3.js Gallery](https://github.com/d3/d3/wiki/Gallery)
+- [D3.js 공부 참고사이트](http://codefactory.kr/d3-js-tutorials/)
+- [D3.js를 이용한 실시간 Line Chart](https://jeong-pro.tistory.com/149)
+
+### Examples of HeatMap
+- [Most basic heatmap in d3.js](https://www.d3-graph-gallery.com/graph/heatmap_basic.html)
+- [Customizing heatmap in d3.js](https://www.d3-graph-gallery.com/graph/heatmap_style.html)
+
+
+## Getting HeatMap Counts in MongoDB
+- [Mongoose Aggregate](https://mongoosejs.com/docs/api.html#aggregate_Aggregate)
+- [Aggregation Stages/$bucket](https://docs.mongodb.com/manual/reference/operator/aggregation/bucket/)
+- [How to implement $bucket to group by multiple fields](https://stackoverflow.com/questions/44481283/how-to-implement-bucket-to-group-by-multiple-fields)
+- [Aggregation Operators/$cond](https://docs.mongodb.com/manual/reference/operator/aggregation/cond/)
