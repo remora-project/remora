@@ -8,7 +8,8 @@ import logger from 'morgan';
 import errorHandler from 'errorhandler';
 import favicon from 'serve-favicon';
 
-import router from './router';
+import connectToMongo from './mongo';
+import route from './router';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -31,7 +32,8 @@ if(app.get('env') === 'development') {
   app.use(errorHandler());
 }
 
-router(app);
+connectToMongo();
+route(app);
 
 http.createServer(app).listen(app.get('port'), () => {
   console.log(`Server is listening on port ${app.get('port')}`);
