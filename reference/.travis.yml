@@ -6,9 +6,6 @@ jdk:
   - oraclejdk8
   - oraclejdk7
   - oraclejdk9
-branches:
-  only:
-    - feature-travisCI
 email:
   recipients:
     - dbwls08640@gmail.com
