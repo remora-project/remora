@@ -10,6 +10,8 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: PROD_PATH,
+    host: '0.0.0.0',
+    port: 8080,
     proxy: {
       '**': 'http://localhost:3000'
     },
