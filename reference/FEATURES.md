@@ -2,11 +2,11 @@
 ### Agent
 #### Monitoring Target
 - WAS
-	- Tomcat
+    - Tomcat
 - Java EE
-	- Servlet
+    - Servlet
 - Framework
-	- Spring
+    - Spring
 
 
 ### Master
