@@ -1,18 +1,31 @@
 <template>
-  <h1>{{ message }}</h1>
+  <v-app>
+    <dashboard />
+    <drilldown-panel />
+  </v-app>
 </template>
 
 <script>
+import Dashboard from './components/Dashboard.vue';
+import DrilldownPanel from './components/DrilldownPanel.vue';
+
 export default {
-  name: 'App',
-  data: ()=>({
-    message: 'Hello World!',
-  }),
-}
+  components: {
+    Dashboard,
+    DrilldownPanel,
+  },
+};
 </script>
 
 <style lang="scss">
-h1 {
-  color: #41B883;
+html {
+  overflow: auto;
+}
+
+#app > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
 }
 </style>

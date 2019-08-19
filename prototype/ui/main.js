@@ -1,6 +1,7 @@
 import Vue from 'vue';
 
-import apolloProvider from './apollo';
+import apolloProvider from './plugins/apolloProvider';
+import vuetify from './plugins/vuetify';
 import App from './App.vue';
 
 Vue.config.productionTip = false;
@@ -8,5 +9,6 @@ Vue.config.productionTip = false;
 new Vue({
   el: '#app',
   apolloProvider,
-  render: h => h(App)
+  vuetify,
+  render: h => h(App),
 });
