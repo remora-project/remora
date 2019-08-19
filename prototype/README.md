@@ -1,7 +1,0 @@
-# Prototype
-
-## Agent
-
-## Master
-
-## UI
