@@ -8,13 +8,19 @@ export default function(app) {
     res.sendFile(path.resolve(__dirname, '../ui/index.html'));
   });
 
-  app.post('/graphql', graphqlHTTP({
-    schema,
-    graphiql: false,
-  }));
+  app.post(
+    '/graphql',
+    graphqlHTTP({
+      schema,
+      graphiql: false,
+    }),
+  );
 
-  app.get('/graphql', graphqlHTTP({
-    schema,
-    graphiql: true,
-  }));
+  app.get(
+    '/graphql',
+    graphqlHTTP({
+      schema,
+      graphiql: true,
+    }),
+  );
 }

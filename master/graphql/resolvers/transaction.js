@@ -5,7 +5,7 @@ export default {
     async transactions() {
       try {
         return await Transaction.find().sort({ timestamp: 1 });
-      } catch(e) {
+      } catch (e) {
         console.error(e);
       }
     },

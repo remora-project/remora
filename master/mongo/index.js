@@ -34,7 +34,7 @@ export default async function() {
       reconnectTries: 900,
       reconnectInterval: 2000, // 900 * 2000 ms = 30 min
     });
-  } catch(e) {
+  } catch (e) {
     console.error(e);
   }
 }

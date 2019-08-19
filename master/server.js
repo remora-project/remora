@@ -19,16 +19,18 @@ app.set('view engine', 'html');
 app.use(favicon(path.resolve(__dirname, '../ui/assets/favicon.ico')));
 app.use(logger('dev'));
 app.use(methodOverride());
-app.use(session({
-  secret: 'uwotm8',
-  resave: true,
-  saveUninitialized: true,
-}));
+app.use(
+  session({
+    secret: 'uwotm8',
+    resave: true,
+    saveUninitialized: true,
+  }),
+);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, '../dist')));
 
-if(app.get('env') === 'development') {
+if (app.get('env') === 'development') {
   app.use(errorHandler());
 }
 

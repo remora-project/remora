@@ -7,4 +7,4 @@ Vue.use(VueApollo);
 
 export default new VueApollo({
   defaultClient: apolloClient,
-});;
+});

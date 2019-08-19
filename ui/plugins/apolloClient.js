@@ -8,12 +8,14 @@ const defaultOptions = {
     errorPolicy: 'all',
   },
   mutate: {
-    errorPolicy: 'all'
+    errorPolicy: 'all',
   },
 };
 
 export default new ApolloClient({
-  link: new HttpLink({ uri: `http://${window.location.hostname}:3000/graphql` }),
+  link: new HttpLink({
+    uri: `http://${window.location.hostname}:3000/graphql`,
+  }),
   cache: new InMemoryCache(),
   defaultOptions,
 });
