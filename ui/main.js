@@ -1,14 +1,15 @@
 import Vue from 'vue';
+import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';
 
 import apolloProvider from './plugins/apolloProvider';
-import vuetify from './plugins/vuetify';
 import App from './App.vue';
 
 Vue.config.productionTip = false;
+Vue.use(Vuetify);
 
 new Vue({
   el: '#app',
   apolloProvider,
-  vuetify,
   render: h => h(App),
 });

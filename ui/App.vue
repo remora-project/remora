@@ -1,7 +1,9 @@
 <template>
   <v-app>
-    <dashboard />
-    <drilldown-panel />
+    <div class="app-wrapper">
+      <dashboard />
+      <drilldown-panel />
+    </div>
   </v-app>
 </template>
 
@@ -22,7 +24,7 @@ html {
   overflow: auto;
 }
 
-#app > div {
+.app-wrapper {
   width: 100%;
   height: 100%;
   display: flex;
