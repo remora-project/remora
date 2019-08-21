@@ -1,13 +1,15 @@
 <template>
   <div class="dashboard">
-
+    <heat-map-wrapper />
   </div>
 </template>
 
 <script>
+import HeatMapWrapper from './HeatMapWrapper.vue';
+
 export default {
   components: {
-
+    HeatMapWrapper,
   },
 };
 </script>
