@@ -13,7 +13,7 @@ allprojects {
   sourceCompatibility = 1.8
 
   jar {
-    version = null
+    archiveVersion = null
   }
 
   dependencies {

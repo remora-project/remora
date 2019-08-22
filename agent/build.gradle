@@ -7,8 +7,8 @@ dependencies {
 }
 
 jar {
-  baseName = 'remora-agent'
-  destinationDir = agentTargetDir
+  archiveBaseName = 'remora-agent'
+  destinationDirectory = agentTargetDir
 }
 
 clean {
