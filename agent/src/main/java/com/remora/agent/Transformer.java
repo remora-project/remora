@@ -1,4 +1,4 @@
-package main.java;
+package com.remora.agent;
 
 import java.lang.instrument.ClassFileTransformer;
 import java.lang.instrument.IllegalClassFormatException;
@@ -9,12 +9,12 @@ import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Opcodes;
 
-import main.java.bci.DefaultClassAdapter;
+import com.remora.agent.bci.DefaultClassAdapter;
 
 public class Transformer implements ClassFileTransformer {
 
   public byte[] transform(ClassLoader classLoader, String className, Class<?> arg2, ProtectionDomain domain,
-      byte[] byteCodeBuffer) throws IllegalClassFormatException {
+                          byte[] byteCodeBuffer) throws IllegalClassFormatException {
 
     byte[] originByteCode = byteCodeBuffer;
 

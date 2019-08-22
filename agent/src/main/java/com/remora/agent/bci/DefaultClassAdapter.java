@@ -1,4 +1,4 @@
-package main.java.bci;
+package com.remora.agent.bci;
 
 import org.objectweb.asm.ClassVisitor;
 

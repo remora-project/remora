@@ -1,4 +1,4 @@
-package main.java;
+package com.remora.agent;
 
 import java.lang.instrument.Instrumentation;
 
