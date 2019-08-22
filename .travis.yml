@@ -1,0 +1,16 @@
+language: java
+jdk:
+  - oraclejdk7
+  - oraclejdk8
+before_install:
+  - chmod +x gradlew
+install:
+  - gradle wrapper
+script:
+  - gradle clean build
+
+branches:
+  only:
+    - develop
+email:
+  recipients: reactionary.remora@gmail.com
