@@ -1,0 +1,16 @@
+ext {
+  agentTargetDir = file('target')
+}
+
+dependencies {
+  compileOnly fileTree(dir: 'lib', include: '*.jar')
+}
+
+jar {
+  baseName = 'remora-agent'
+  destinationDir = agentTargetDir
+}
+
+clean {
+  delete agentTargetDir
+}

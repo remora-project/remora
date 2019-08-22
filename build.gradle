@@ -1,0 +1,22 @@
+group 'com.remora'
+version '1.0-SNAPSHOT'
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+}
+
+allprojects {
+  apply plugin: 'java'
+
+  sourceCompatibility = 1.8
+
+  jar {
+    version = null
+  }
+
+  dependencies {
+    testCompile 'junit:junit:4.12'
+  }
+}
