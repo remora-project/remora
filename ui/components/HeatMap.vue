@@ -29,7 +29,7 @@ import * as d3 from 'd3';
 export default {
   props: {
     dataSet: {
-      type: [Object, Array],
+      type: Array,
       default() {
         return [];
       },
