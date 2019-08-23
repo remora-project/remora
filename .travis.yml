@@ -1,9 +1,10 @@
 language: java
 jdk:
-  - oraclejdk8
+  - openjdk8
 
 script:
   - ./gradlew clean build
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
@@ -15,5 +16,10 @@ cache:
 branches:
   only:
     - develop
-email:
-  recipients: reactionary.remora@gmail.com
+
+notifications:
+  email:
+    recipients:
+      - reactionary.remora@gmail.com
+    on_success: change # options: [always|never|change] default: change
+    on_failure: always # options: [always|never|change] default: always
